@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>SUMMARYKu</title>
+    </head>
+   
+    <style>
+            body {
+            background-color:#FF9999;}
+    </style>
+
+    <body><center>
+{% if user.is_authenticated %}
+        <h1>Selamat Datang di SUMMARYKu, {{ user.username }} ☺️ </h1>
+{% else %}
+	 <h1>Selamat Datang di SUMMARYKu !</h1>
+       Aplikasi ini diperuntukan khusus untuk penulis.
+       Silahkan login terlebih dahulu !<br />
+{% endif %}
+     {% if user.is_authenticated %}
+	<a href="/blog/restricted/">Restricted Page</a><br />
+	<a href="/blog/about/">Mulai Meringkas</a><br/>
+	<a href="/blog/logout/">Logout</a><br />
+     {% else %}
+	<a href="/blog/register/">Register Here</a><br />
+	<a href="/blog/login/">Login</a><br />
+     {% endif %}</center>
+    </body>
+
+</html>
