@@ -8,7 +8,7 @@
             background-color:#FF9999;}
     </style>
 
-    <body><center>
+    <body>
         <h1>Daftar di SUMMARYKu</h1>
 
         {% if registered %}
@@ -29,8 +29,8 @@
             {{ profile_form.as_p }}
 
             <!-- Provide a button to click to submit the form. -->
-            <input type="submit" name="submit" value="Register" />
+            <input type="submit" name="submit" value="Daftar" />
         </form>
         {% endif %}
-    </center></body>
+    </body>
 </html>
